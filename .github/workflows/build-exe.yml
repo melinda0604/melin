@@ -22,11 +22,11 @@ jobs:
 
       - name: Compile C++ to EXE
         shell: cmd
-        run: cl /nologo /EHsc /std:c++17 inputan_ganjil_genap.cpp /Fe:inputan_ganjil_genap.exe
+        run: cl /nologo /EHsc /std:c++17 tiketbut.cpp /Fe:tiketbut.exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: inputan_ganjil_genap-windows-exe
-          path: inputan_ganjil_genap.exe
+          name: tiketbut-windows-exe
+          path: tiketbut.exe
           if-no-files-found: error
