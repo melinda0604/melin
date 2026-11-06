@@ -1,0 +1,32 @@
+
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up MSVC compiler
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Compile C++ to EXE
+        shell: cmd
+        run: cl /nologo /EHsc /std:c++17 inputannilai.cpp /Fe:inputannilai.exe
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: inputannilai-windows-exe
+          path: inputannilai.exe
+          if-no-files-found: error
