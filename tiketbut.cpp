@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-// Fungsi pemesanan tiket
+
 void pesanTiket() {
     int pilihan, jumlah;
     int harga;
@@ -61,6 +61,6 @@ void pesanTiket() {
 
 int main() {
     pesanTiket();
-
+system(pause)
     return 0;
 }
