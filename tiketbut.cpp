@@ -61,6 +61,6 @@ void pesanTiket() {
 
 int main() {
     pesanTiket();
-system('pause');
+system("pause");
     return 0;
 }
