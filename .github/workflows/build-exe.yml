@@ -22,11 +22,11 @@ jobs:
 
       - name: Compile C++ to EXE
         shell: cmd
-        run: cl /nologo /EHsc /std:c++17 tiketbut.cpp /Fe:tiketbut.exe
+        run: cl /nologo /EHsc /std:c++17 menu.cpp /Fe:menu.exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: tiketbut-windows-exe
-          path: tiketbut.exe
+          name: menu-windows-exe
+          path: menu.exe
           if-no-files-found: error
