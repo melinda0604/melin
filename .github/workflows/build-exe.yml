@@ -22,11 +22,11 @@ jobs:
 
       - name: Compile C++ to EXE
         shell: cmd
-        run: cl /nologo /EHsc /std:c++17 menu.cpp /Fe:menu.exe
+        run: cl /nologo /EHsc /std:c++17 nama.cpp /Fe:nama.exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: menu-windows-exe
-          path: menu.exe
+          name: nama-windows-exe
+          path: nama.exe
           if-no-files-found: error
